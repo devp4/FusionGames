@@ -5,6 +5,11 @@ import MainMenu from './MainMenu/MainMenu';
 
 
 function Home() {
+	// Generate a random number between 1 and 9999
+	const randomNumber = Math.floor(Math.random() * 9999) + 1;
+
+	if (!localStorage.getItem("username")) localStorage.setItem("username", "Anonymous" + randomNumber)
+
   return (
     <AppShell>
       <AppShell.Main 

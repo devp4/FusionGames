@@ -22,7 +22,15 @@ function Lobbies() {
 			>
 				
 				<LobbyCard />
-
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
+				<LobbyCard />
 			</SimpleGrid>
 		</Box>
 	)

@@ -4,7 +4,6 @@ import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 function CreateLobby() {
-
 	const games = ["Guess It", "Type Battles"]
 
 	const gameNameRef = useRef(null)
@@ -12,7 +11,7 @@ function CreateLobby() {
 	const lobbyNameRef = useRef(null)
 
 	const [error, setError] = useState(false)
-	
+
 	const navigate = useNavigate()
 
 	const createLobby = async () => {
@@ -40,7 +39,7 @@ function CreateLobby() {
 		})
 
 		const { lobbyId } = await data.json()
-
+		
 		if (lobbyId) {
 			navigate("join/" + lobbyId)
 		}

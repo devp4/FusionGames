@@ -2,13 +2,23 @@ import { Box, Group, TextInput, Stack, Text, Title } from "@mantine/core"
 import { Door, Wifi } from "tabler-icons-react"
 
 function InfoBox() {
+	const updateUsername = (event) => {
+		const userName = event.target.value
+		localStorage.setItem("username", userName)
+	}
+
 	return (
 		<Box h="100%" p={20} style={{ borderRadius: "10px", border: "1px solid #424242", }}>
 			<Box ta={"center"}>
 				<Title p="5 0 20 0" c={"#fff"}>FUSION GAMES</Title>
 			</Box>
 			<Text pb="10">Username</Text>
-			<TextInput placeholder="Username" defaultValue={"Anonymous"}></TextInput>
+			<TextInput
+				placeholder="Username" 
+				defaultValue={localStorage.getItem("username")} 
+				maxLength={20}
+				onChange={updateUsername}>
+			</TextInput>
 
 			<Stack pt="30" gap={"sm"}>
 				<Group gap={"sm"}>

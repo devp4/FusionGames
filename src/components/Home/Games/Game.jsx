@@ -17,11 +17,11 @@ function Game({ name }) {
 		}
 	}
 
-	const game = games[name]
-
-  if (!game) {
+	if (!(name in games)) {
     return <div>Game not found</div>;
 	}
+
+	const game = games[name]
 
 	return (
     <Card ta="center" w="200px" maw="200px" shadow="sm" padding="sm" radius="md" withBorder>

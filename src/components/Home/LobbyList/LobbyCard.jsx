@@ -32,7 +32,7 @@ function LobbyCard() {
 						fontSize: "100%",
 						padding: "12px"
 					}} 
-					color="#3ba55c">
+					color="orange">
 					20 / 20
 				</Badge>
       </Group>
